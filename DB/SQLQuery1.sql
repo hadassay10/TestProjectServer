@@ -15,6 +15,8 @@ GO
 SET IDENTITY_INSERT [dbo].[Students] ON 
 GO
 INSERT [dbo].[Students] ([Id], [Name], [BirthDate], [TZ]) VALUES (1, N'Hadassa', CAST(N'2023-12-12' AS Date), N'121212121')
+INSERT [dbo].[Students] ([Id], [Name], [BirthDate], [TZ]) VALUES (2, N'Hadassa2', CAST(N'2022-12-12' AS Date), N'155212121')
+
 GO
 SET IDENTITY_INSERT [dbo].[Students] OFF
 GO
