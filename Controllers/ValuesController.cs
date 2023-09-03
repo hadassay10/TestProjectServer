@@ -7,12 +7,17 @@ using System.Web.Http;
 
 namespace TestProjectServer.Controllers
 {
+    [RoutePrefix("api/values")]
     public class ValuesController : ApiController
     {
         // GET api/values
-        public IEnumerable<string> Get()
+        [Route("GetStudents")]
+        public List<Students> GetStudents()
         {
-            return new string[] { "value1", "value2" };
+            using (var db = new testEntities()) {
+                return db.Students.ToList();
+            }
+             
         }
 
         // GET api/values/5
